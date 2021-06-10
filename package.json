@@ -14,7 +14,7 @@
     "release": "RELEASE=patch yarn release:run",
     "release:minor": "RELEASE=minor yarn release:run",
     "release:major": "RELEASE=major yarn release:run",
-    "release:run": "yarn build && yarn size && yarn publish --$RELEASE && yarn release:tag && yarn docs:deploy",
+    "release:run": "yarn build && yarn size && yarn publish --$RELEASE && yarn release:tag",
     "release:tag": "git push origin v$npm_package_version",
     "fix": "yarn prettier:fix && yarn lint:fix --ext ts src",
     "lint": "eslint --ext ts src",
