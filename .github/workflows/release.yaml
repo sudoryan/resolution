@@ -21,7 +21,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-      
+
       - name: Install Dependencies
         run: yarn install
 
@@ -38,3 +38,4 @@ jobs:
 
       - name: Deploy docs
         run: yarn docs:deploy
+
