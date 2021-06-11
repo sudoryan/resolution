@@ -1,6 +1,6 @@
 {
   "name": "resolution-test",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "Domain Resolution for blockchain domains",
   "main": "./build/index.js",
   "directories": {
@@ -29,7 +29,7 @@
     "build:symlink": "yarn build && ln -sf $PWD/build/cli/cli.js  /usr/local/bin/resolution",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec yarn build",
     "docs": "yarn docs:clone && yarn docs:generate && yarn docs:readme",
-    "docs:clone": "([ -d ./docs ] || git clone --branch gh-pages https://github.com:unstoppabledomains/resolution.git docs) && git -C ./docs pull",
+    "docs:clone": "([ -d ./docs ] || git clone --branch gh-pages git://github.com:unstoppabledomains/resolution.git docs) && git -C ./docs pull",
     "docs:generate": "yarn run typedoc --out \"./docs/v$npm_package_version\"",
     "docs:readme": "./docs-readme.sh",
     "docs:deploy": "yarn docs && ./deploy-docs.sh",
